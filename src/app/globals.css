@@ -10,14 +10,55 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-family-Lexend: var(--font-lexend);
+  
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  
   }
 }
+
+/* @font-face {
+  font-family: 'Lexend';
+  src: url('/fonts/Lexend-Regular.ttf') format('ttf');
+  font-weight: 400;
+  font-style: normal;
+} */
+
+
+ :root {
+    --color-brand-yellow: #FF9D1F; /* Custom yellow color */
+    --color-brand-dark: #0A0A0F;
+    --color-brand-light: #1A1A1A;
+    --color-gray-light: #d1d5db;
+ }
+
+/* Utility classes for custom colors */
+.text-brand-yellow {
+  color: var(--color-brand-yellow);
+}
+
+.bg-brand-yellow {
+  background-color: var(--color-brand-yellow);
+}
+
+.bg-brand-dark {
+  background-color: var(--color-brand-dark);
+}
+
+.bg-brand-light {
+  background-color: var(--color-brand-light);
+}
+
+.border-brand-yellow {
+  border-color: var(--color-brand-yellow);
+}
+
+
 
 body {
   background: var(--background);

@@ -22,20 +22,23 @@ const HowItWorks: FC = () => {
   ];
 
   return (
-    <section className="bg-[#080C17] h-screen py-20 px-20" id="how-it-works">
+    <section
+      className="bg-[#080C17] py-12 px-4 sm:px-8 md:px-20"
+      id="how-it-works"
+    >
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <div className="flex flex-col items-center">
-          <h2 className="text-3xl md:text-4xl text-[#fff] font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl text-white font-bold mb-3">
             How it <span className="text-brand-yellow">Works</span>
           </h2>
-          <p className="text-white text-sm">
+          <p className="text-[#BCBCBC] text-sm sm:text-base max-w-md">
             A simple breakdown of how to watch, earn, and enjoy.
           </p>
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-10 md:mt-12">
           {HowItWorksSteps.map((step, index) => (
             <div
               key={index}
@@ -48,14 +51,14 @@ const HowItWorks: FC = () => {
               {/* Text Section */}
               <div className="p-6">
                 <h3
-                  className={`text-xl font-semibold mb-2 ${
+                  className={`text-lg sm:text-xl font-semibold mb-2 ${
                     index === 1 ? "text-[#080C17]" : "text-white"
                   }`}
                 >
                   {step.title}
                 </h3>
                 <p
-                  className={`text-sm leading-relaxed ${
+                  className={`text-sm sm:text-base leading-relaxed ${
                     index === 1 ? "text-[#080C17]" : "text-[#BCBCBC]"
                   }`}
                 >
@@ -63,22 +66,23 @@ const HowItWorks: FC = () => {
                 </p>
               </div>
 
-{/* Image Section */}
-<div
-  className={`relative w-full ${
-    index === 1 ? "h-52 md:h-64" : "h-64 md:h-72"
-  }`}
->
-  <div className={`${index === 1 ? "p-10" : "px-6 pb-6"} w-full h-full`}>
-    <Image
-      src={step.image}
-      alt={step.title}
-      fill
-      className="object-contain"
-    />
-  </div>
-</div>
-
+              {/* Image Section */}
+              <div
+                className={`relative w-full ${
+                  index === 1 ? "h-40 sm:h-52 md:h-64" : "h-48 sm:h-64 md:h-72"
+                }`}
+              >
+                <div
+                  className={`${index === 1 ? "p-6 sm:p-10" : "px-4 sm:px-6 pb-4 sm:pb-6"} w-full h-full`}
+                >
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
             </div>
           ))}
         </div>

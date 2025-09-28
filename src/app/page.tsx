@@ -17,7 +17,7 @@ function page() {
       <Navbar />
       <Hero />
       <HowItWorks />
-        <h3 className="bg-[#080C17] text-white text-2xl pl-20 font-semibold">Stream now</h3>
+        {/* <h3 className="bg-[#080C17] text-white text-2xl pl-20 font-semibold">Stream now</h3> */}
       <MovieSlider />
       <RevenueSharing />
       <Creator />

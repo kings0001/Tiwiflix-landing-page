@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Creators: FC = () => {
   return (
-    <section className="bg-[#080C17] h-screen px-6">
+    <section className="bg-[#080C17] h-screen px-20">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 rounded-xl p-8">
         
         {/* Left Side - Static Image */}
@@ -13,14 +13,14 @@ const Creators: FC = () => {
             alt="Creator Power Zone"
             width={500}
             height={400}
-            className="w-full h-auto rounded-lg"
+            className="w-full h-auto rounded-md"
           />
         </div>
 
         {/* Right Side - Content */}
         <div className="flex-1">
           {/* Label */}
-          <div className="inline-flex items-center bg-[#271600] text-[#FFBC00] rounded px-2 py-1 text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-1 bg-[#271600] text-[#FFBC00] rounded-full px-4 py-3 mb-4 text-sm font-medium">
             <Image 
               src="/images/logo.svg" 
               alt="logo" 

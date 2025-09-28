@@ -4,6 +4,7 @@ import Image from "next/image";
 
 export default function OnTheGoSection() {
   return (
+    <div className="w-full brand-bg px-20">
     <section className="relative w-full h-screen bg-[linear-gradient(155deg,#F9AC17_44.93%,#FF5E01_85.88%)] px-6 flex flex-col items-center text-center overflow-hidden">
       
       {/* Background image starting from bottom to paragraph */}
@@ -69,5 +70,6 @@ export default function OnTheGoSection() {
         </div>
       </div>
     </section>
+    </div>
   );
 }

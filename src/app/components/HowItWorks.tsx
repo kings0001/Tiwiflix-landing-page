@@ -22,7 +22,7 @@ const HowItWorks: FC = () => {
   ];
 
   return (
-    <section className="bg-brand-dark h-screen py-20 px-6" id="how-it-works">
+    <section className="bg-[#080C17] h-screen py-20 px-20" id="how-it-works">
       <div className="max-w-7xl mx-auto text-center">
         {/* Heading */}
         <div className="flex flex-col items-center">
@@ -39,39 +39,46 @@ const HowItWorks: FC = () => {
           {HowItWorksSteps.map((step, index) => (
             <div
               key={index}
-              className={`rounded-2xl p-4 flex flex-col justify-between ${
+              className={`rounded-2xl flex flex-col justify-between ${
                 index === 1
-                  ? "bg-brand-yellow text-black"
+                  ? "bg-brand-yellow text-[#080C17]"
                   : "bg-[#11172C] text-white"
               }`}
             >
-              <div>
+              {/* Text Section */}
+              <div className="p-6">
                 <h3
                   className={`text-xl font-semibold mb-2 ${
-                    index === 1 ? "text-black" : "text-white"
+                    index === 1 ? "text-[#080C17]" : "text-white"
                   }`}
                 >
                   {step.title}
                 </h3>
                 <p
-                  className={`text-sm ${
-                    index === 1 ? "text-black/80" : "text-gray-300"
+                  className={`text-sm leading-relaxed ${
+                    index === 1 ? "text-[#080C17]" : "text-[#BCBCBC]"
                   }`}
                 >
                   {step.description}
                 </p>
               </div>
 
-              {/* Full-width image */}
-              <div className="mt-6">
-                <Image
-                  src={step.image}
-                  alt={step.title}
-                  width={600}
-                  height={400}
-                  className="w-full h-40 object-cover rounded-lg"
-                />
-              </div>
+{/* Image Section */}
+<div
+  className={`relative w-full ${
+    index === 1 ? "h-52 md:h-64" : "h-64 md:h-72"
+  }`}
+>
+  <div className={`${index === 1 ? "p-10" : "px-6 pb-6"} w-full h-full`}>
+    <Image
+      src={step.image}
+      alt={step.title}
+      fill
+      className="object-contain"
+    />
+  </div>
+</div>
+
             </div>
           ))}
         </div>

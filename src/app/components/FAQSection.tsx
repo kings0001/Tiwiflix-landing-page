@@ -39,7 +39,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="w-full bg-[#0B0F19] py-16 px-6 flex flex-col items-center">
+    <section className="w-full brand-bg py-16 px-6 flex flex-col items-center">
       <h2 className="text-2xl md:text-3xl font-bold text-white mb-10">
         Frequently Asked Questions
       </h2>

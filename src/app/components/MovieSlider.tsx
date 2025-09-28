@@ -78,9 +78,11 @@ function InfiniteRow({
 
 export default function MovieSlider() {
   return (
+      
     <div className="w-full bg-[#080C17] py-8 overflow-hidden space-y-6">
       <InfiniteRow movies={row1Movies} direction="left" />
       <InfiniteRow movies={row2Movies} direction="right" />
     </div>
+    
   );
 }

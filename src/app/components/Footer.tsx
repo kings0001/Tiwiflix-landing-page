@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#0B0F19] text-gray-300 py-12 px-6">
+    <footer className="w-full brand-dark-bg text-gray-300 py-12 px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left: Logo + Description */}
         <div>
@@ -13,9 +13,9 @@ export default function Footer() {
             alt="Tiwiflix Logo"
             width={140}
             height={40}
-            className="mb-4"
+            className="mb-1"
           />
-          <p className="text-sm mb-4">
+          <p className="text-sm mb-4 max-w-sm">
             No. 1 Multi-Chain Decentralized Video Streaming and Entertainment
             Platform.
           </p>
@@ -34,9 +34,9 @@ export default function Footer() {
             />
           </div>
           {/* Bottom copyright */}
-      <div className=" pt-6  text-sm text-gray-500">
-        © TiwiFlix.io. All rights reserved.
-      </div>
+          <div className=" pt-6  text-sm text-gray-500">
+            © TiwiFlix.io. All rights reserved.
+          </div>
         </div>
 
         {/* Right: Grid of 4 sections */}
@@ -82,8 +82,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-
-      
     </footer>
   );
 }

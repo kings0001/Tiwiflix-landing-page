@@ -3,18 +3,18 @@ import Image from "next/image";
 
 const RevenueSharing: FC = () => {
   return (
-    <section className="bg-[#080C17] py-20 px-6">
-      <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center rounded-xl p-8">
+    <section className="bg-[#080C17] py-20 px-20">
+      <div className="mx-auto flex flex-col md:flex-row items-center justify-center gap-2 rounded-xl p-8">
         {/* Left Content */}
-        <div>
+        <div className="flex-1 max-w-md">
           {/* Label */}
-          <div className="inline-flex items-center bg-[#271600] text-[#FFBC00] rounded px-2 py-2 mb-4 text-sm font-medium">
+          <div className="inline-flex items-center gap-1 bg-[#271600] text-[#FFBC00] rounded-full px-4 py-3 mb-4 text-sm font-medium">
             <Image
               src="/images/logo.svg"
               alt="logo"
               width={16}
               height={16}
-              className="mr-1"
+              className=""
             />
             <span>Revenue Sharing Model</span>
           </div>
@@ -25,7 +25,7 @@ const RevenueSharing: FC = () => {
             <span className="text-brand-yellow">Creators.</span>
           </h2>
 
-          <ul className="space-y-3 text-white/90 text-base">
+          <ul className="space-y-3 text-white text-md">
             <li className="flex items-start">
               <Image
                 src="/images/tick.svg"
@@ -61,13 +61,13 @@ const RevenueSharing: FC = () => {
         </div>
 
         {/* Right Static Image */}
-        <div className="flex justify-center">
+        <div className="flex-1 flex justify-center">
           <Image
             src="/images/three-d-icon.svg"
             alt="Revenue Sharing Chart"
-            width={350}
-            height={350}
-            className="w-full max-w-[400px]"
+            width={450}
+            height={450}
+            className="w-full max-w-[600px]"
           />
         </div>
       </div>

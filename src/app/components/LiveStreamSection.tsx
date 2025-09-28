@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { Play, Pause, Volume2, MessageCircle } from "lucide-react";
 import Image from "next/image";
+import { div } from "framer-motion/client";
 
 export default function LiveStreamSection() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -20,7 +21,8 @@ export default function LiveStreamSection() {
   };
 
   return (
-    <section className="w-full bg-[#0E1321] py-16 px-6 flex flex-col items-center text-center">
+    <div className="w-full brand-bg px-20 py-20">
+    <section className="w-full bg-[#0E1321] rounded-2xl py-16 px-6 flex flex-col items-center text-center">
       {/* Heading */}
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
         Experience Live{" "}
@@ -86,5 +88,6 @@ export default function LiveStreamSection() {
         Host a Live Stream
       </button>
     </section>
+    </div>
   );
 }

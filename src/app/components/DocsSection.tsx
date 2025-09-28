@@ -4,8 +4,8 @@ import { BookOpen, Code } from "lucide-react";
 
 export default function DocsSection() {
   return (
-    <section className="w-full bg-[#11172C] py-16 px-6 flex flex-col items-center">
-        <div className="bg-[#080C17] p-20">
+    <section className="w-full bg-[#11172C] py-16 px-20 flex flex-col items-center">
+        <div className="bg-[#080C17] w-full p-20">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl h-auto w-full">
         
         {/* Card 1 */}

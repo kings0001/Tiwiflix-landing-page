@@ -34,12 +34,17 @@
     --color-brand-yellow: #FF9D1F; /* Custom yellow color */
     --color-brand-dark: #0A0A0F;
     --color-brand-light: #1A1A1A;
+    --color-brand-bg: #11172C;
     --color-gray-light: #d1d5db;
+    --color-brand-dark-bg: #080C17
  }
 
 /* Utility classes for custom colors */
 .text-brand-yellow {
   color: var(--color-brand-yellow);
+}
+.brand-bg{
+  background-color: var(--color-brand-bg);
 }
 
 .bg-brand-yellow {
@@ -48,6 +53,10 @@
 
 .bg-brand-dark {
   background-color: var(--color-brand-dark);
+}
+
+.brand-dark-bg {
+  background-color: var(--color-brand-dark-bg);
 }
 
 .bg-brand-light {

@@ -13,10 +13,11 @@ import FAQSection from './components/FAQSection'
 import Footer from './components/Footer'
 function page() {
   return (
-     <div className='font-lexend'>
+     <div className=''>
       <Navbar />
       <Hero />
       <HowItWorks />
+        <h3 className="bg-[#080C17] text-white text-2xl pl-20 font-semibold">Stream now</h3>
       <MovieSlider />
       <RevenueSharing />
       <Creator />

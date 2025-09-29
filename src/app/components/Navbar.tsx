@@ -2,13 +2,14 @@
 import Link from "next/link";
 import { FC, useState } from "react";
 import Image from "next/image";
-import { Menu, X } from "lucide-react";
+import { X } from "lucide-react";
 
 const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full bg-[#02061B] z-50">
+    <nav className="fixed top-0 w-full m-4 md:m-0 border border-[#FF9814] md:border-0 rounded-lg md:rounded-none bg-[#02061B] z-50">
+
       <div className="mx-auto flex justify-between items-center px-6 md:px-20 py-4">
         {/* Logo */}
         <Image
@@ -47,7 +48,14 @@ const Navbar: FC = () => {
 
         {/* Mobile Toggle */}
         <button className="md:hidden text-white" onClick={() => setIsOpen(true)}>
-          <Menu size={28} />
+          {/* <Menu size={28} /> */}
+          <Image 
+          src={"/images/menu-icon.svg"}
+          alt="Menu Icon"
+          width={28}
+          height={28}
+          className=""          
+          />
         </button>
       </div>
 
@@ -57,7 +65,7 @@ const Navbar: FC = () => {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="flex justify-between items-center p-6 border-b border-[#1C2235]">
+        <div className="flex justify-between items-center p-6">
           <Image
             src="/images/tiwiflix-logo.svg"
             alt="TiwiFlix Logo"
@@ -108,12 +116,12 @@ const Navbar: FC = () => {
       </div>
 
       {/* Backdrop */}
-      {isOpen && (
+      {/* {isOpen && (
         <div
           className="fixed inset-0 bg-[#080C17] z-40"
           onClick={() => setIsOpen(false)}
         ></div>
-      )}
+      )} */}
     </nav>
   );
 };

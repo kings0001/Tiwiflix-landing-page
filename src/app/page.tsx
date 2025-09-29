@@ -13,7 +13,7 @@ import FAQSection from './components/FAQSection'
 import Footer from './components/Footer'
 function page() {
   return (
-     <div className=''>
+     <div className='font-lexend'>
       <Navbar />
       <Hero />
       <HowItWorks />

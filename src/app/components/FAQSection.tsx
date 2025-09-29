@@ -40,7 +40,7 @@ export default function FAQSection() {
 
   return (
     <section className="w-full brand-bg py-16 px-6 flex flex-col items-center">
-      <h2 className="text-2xl md:text-3xl font-bold text-white mb-10">
+      <h2 className="text-2xl md:text-4xl font-bold text-white mb-10">
         Frequently Asked Questions
       </h2>
 
@@ -53,7 +53,7 @@ export default function FAQSection() {
             {/* Question */}
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center px-4 py-3 text-left text-white font-medium bg-[#0F1629] hover:bg-[#151d34] transition"
+              className="w-full flex justify-between items-center px-4 py-6 rounded-2xl text-left text-white font-medium bg-[#080C17] transition"
             >
               {faq.question}
               {openIndex === index ? (
@@ -69,7 +69,7 @@ export default function FAQSection() {
                 openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              <div className="px-4 py-3 bg-[#151d34] text-gray-300 text-sm">
+              <div className="px-4 py-3 bg-[#080C17] text-gray-300 text-sm">
                 {faq.answer}
               </div>
             </div>

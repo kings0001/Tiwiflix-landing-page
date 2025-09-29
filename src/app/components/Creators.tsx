@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Creators: FC = () => {
   return (
-    <section className="bg-[#080C17] h-screen px-20">
+    <section className="bg-[#080C17] h-screen px-2 md:px-20">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 rounded-xl p-8">
         
         {/* Left Side - Static Image */}

@@ -53,7 +53,7 @@ export default function FAQSection() {
             {/* Question */}
             <button
               onClick={() => toggleFAQ(index)}
-              className="w-full flex justify-between items-center px-4 py-6 rounded-2xl text-left text-white font-medium bg-[#080C17] transition"
+              className="w-full flex justify-between items-center px-4 py-6 text-left text-white font-medium bg-[#080C17] transition"
             >
               {faq.question}
               {openIndex === index ? (

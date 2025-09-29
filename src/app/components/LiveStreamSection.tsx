@@ -88,7 +88,7 @@ export default function LiveStreamSection() {
                 src="/images/chat-box.svg"
                 alt="Live Chat"
                 fill
-                className="object-cover"
+                className="object-contain h-full w-full"
               />
             </div>
           </div>
@@ -133,6 +133,13 @@ export default function LiveStreamSection() {
                 className="text-gray-300 hover:text-white"
               >
                 {isPlaying ? <Pause size={16} /> : <Play size={16} />}
+              </button>
+              
+              <button
+                onClick={togglePlay}
+                className="text-gray-300 hover:text-white"
+              >
+                 <Pause />
               </button>
 
               <div className="flex items-center gap-3">

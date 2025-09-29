@@ -33,7 +33,7 @@ const UserExperience: FC = () => {
           {/* Left Content - Stacked Cards */}
           <div className="space-y-4">
             {/* Card 1 with gradient bottom border */}
-            <div className="relative flex items-start bg-[#11172C] rounded-lg p-4 text-white text-sm">
+            <div className="relative flex items-start bg-[#11172C] rounded-lg p-6 text-white text-sm">
               <Image
                 src="/images/coins-01.svg"
                 alt="icon"
@@ -42,7 +42,7 @@ const UserExperience: FC = () => {
                 className="mr-3"
               />
               <div>
-                <h4 className="font-semibold">BP2W</h4>
+                <h4 className="font-semibold text-[15px]">BP2W</h4>
                 <p className="text-[#BCBCBC] text-sm">
                   Be-Paid-to-Watch – Earn TP Points watching sponsored videos.
                 </p>
@@ -52,7 +52,7 @@ const UserExperience: FC = () => {
             </div>
 
             {/* Card 2 */}
-            <div className="flex items-start bg-[#FFBC00] text-black rounded-lg p-4 text-sm font-medium">
+            <div className="flex items-start bg-gradient-to-r from-[#F9AC17] to-[#FF5E01] text-black rounded-lg p-6 text-sm font-medium">
               <Image
                 src="/images/task-daily-02.svg"
                 alt="icon"
@@ -61,7 +61,7 @@ const UserExperience: FC = () => {
                 className="mr-3"
               />
               <div>
-                <h4 className="font-semibold">Tasks & Referrals</h4>
+                <h4 className="font-semibold text-[15px]">Tasks & Referrals</h4>
                 <p className="text-black/80 text-sm">
                   Complete missions, invite friends, unlock NFT rewards.
                 </p>
@@ -69,9 +69,10 @@ const UserExperience: FC = () => {
             </div>
 
             {/* Card 3 with gradient top border */}
-            <div className="relative flex items-start bg-[#1C243A] rounded-lg p-4 text-white/90 text-sm">
+            <div className="relative flex items-start bg-[#11172C] rounded-t-lg p-6 text-white/90 text-sm">
               <div className="absolute top-0 left-0 w-full h-[3px] rounded-t-lg bg-gradient-to-r from-[#080C17] via-[#FFBC00] to-[#080C17]" />
 
+<div className="absolute -bottom-6 left-0 w-full h-[28px] bg-gradient-to-b from-[#11172C] via-[#080c179c] to-transparent" />
               <Image
                 src="/images/tv-smart.svg"
                 alt="icon"
@@ -80,7 +81,7 @@ const UserExperience: FC = () => {
                 className="mr-3"
               />
               <div>
-                <h4 className="font-semibold">Watch Parties</h4>
+                <h4 className="font-semibold text-[15px]">Watch Parties</h4>
                 <p className="text-white/70 text-sm">
                   Sync and watch movies with friends in real time.
                 </p>

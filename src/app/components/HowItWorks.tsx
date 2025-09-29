@@ -4,7 +4,7 @@ import Image from "next/image";
 const HowItWorks: FC = () => {
   return (
     <section
-      className="bg-[#080C17] py-12 px-4 sm:px-8 md:px-20"
+      className="bg-[#080C17] py-32 px-4 sm:px-8 md:px-20"
       id="how-it-works"
     >
       <div className="max-w-7xl mx-auto text-center">
@@ -19,11 +19,11 @@ const HowItWorks: FC = () => {
         </div>
 
         {/* Steps */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+        <div className="md:flex w-full justify-center  gap-2 mt-20 mx-auto max-w-6xl h-96">
           {/* Card 1 - Connect */}
-          <div className="rounded-2xl flex flex-col justify-between overflow-hidden bg-[#11172C] text-white">
-            <div className="p-6 text-left">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">Connect</h3>
+          <div className="rounded-2xl w-[27%] px-3 flex flex-col justify-between overflow-hidden bg-[#11172C] text-white">
+            <div className="pt-6 text-left">
+              <h3 className="text-lg md:text-2xl font-semibold mb-2">Connect</h3>
               <p className="text-sm sm:text-base leading-relaxed text-[#BCBCBC]">
                 Link your wallet or socials to get started in seconds.
               </p>
@@ -34,40 +34,37 @@ const HowItWorks: FC = () => {
                 alt="Connect"
                 width={220}
                 height={282}
-                className="object-contain mx-1 w-[22.875rem] h-[17.625rem]"
+                className="object-contain w-full h-full"
               />
             </div>
           </div>
 
- {/* Card 2 - Access */}
-<div className="rounded-2xl flex flex-col px-2 overflow-hidden bg-gradient-to-b from-[#FFD335] to-[#FF8C00] text-[#080C17] h-[32rem]">
-  {/* Text */}
-  <div className="p-6 text-left">
-    <h3 className="text-lg sm:text-xl font-semibold mb-2">Access</h3>
-    <p className="text-sm sm:text-base leading-relaxed text-[#080C17]">
-      Hold ≥ $1 TWC or mint a TiwiFlix NFT.
-    </p>
-  </div>
+          {/* Card 2 - Access */}
+          <div className="rounded-2xl w-[35%]  flex flex-col px-3 overflow-hidden bg-gradient-to-b from-[#FFD335] to-[#FF8C00] text-[#080C17] ">
+            {/* Text */}
+            <div className="pt-6 text-left">
+              <h3 className="text-lg md:text-2xl font-semibold mb-2">Access</h3>
+              <p className="text-sm sm:text-base leading-relaxed text-[#080C17]">
+                Hold ≥ $1 TWC or mint a TiwiFlix NFT.
+              </p>
+            </div>
 
-  {/* Image forced to base */}
-  <div className="relative w-full flex justify-center mt-auto">
-    <Image
-      src="/images/access.svg"
-      alt="Access"
-      width={220}
-      height={292}
-      className="object-contain mx-1 w-[29.6875rem] h-[21.625rem]"
-    />
-  </div>
-</div>
-
-
-
+            {/* Image forced to base */}
+            <div className="relative w-full flex justify-center mt-auto">
+              <Image
+                src="/images/access.svg"
+                alt="Access"
+                width={220}
+                height={292}
+                className="object-contain w-full h-full"
+              />
+            </div>
+          </div>
 
           {/* Card 3 - Watch & Earn */}
-          <div className="rounded-2xl flex flex-col justify-between overflow-hidden bg-[#11172C] text-white">
-            <div className="p-6 text-left">
-              <h3 className="text-lg sm:text-xl font-semibold mb-2">
+          <div className="rounded-2xl px-3 flex flex-col justify-between overflow-hidden bg-[#11172C] text-white w-[27%] ">
+            <div className="pt-6 text-left">
+              <h3 className="text-lg md:text-2xl font-semibold mb-2">
                 Watch & Earn
               </h3>
               <p className="text-sm sm:text-base leading-relaxed text-[#BCBCBC]">
@@ -80,7 +77,7 @@ const HowItWorks: FC = () => {
                 alt="Watch & Earn"
                 width={220}
                 height={282}
-                className="object-contain mx-1 w-[22.875rem] h-[17.625rem]"
+                className="object-contain w-full h-full"
               />
             </div>
           </div>

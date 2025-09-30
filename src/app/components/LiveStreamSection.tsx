@@ -34,7 +34,7 @@ export default function LiveStreamSection() {
           {/* Heading */}
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Experience Live{" "}
-            <span className="bg-[linear-gradient(117deg,#F9AC17_0%,#FF5E01_100%)] bg-clip-text text-transparent">
+            <span className="text-[#FF9D1F]">
               Streams
             </span>
           </h2>
@@ -54,7 +54,6 @@ export default function LiveStreamSection() {
                 className="w-full h-full object-cover"
                 autoPlay
                 loop
-                muted
                 playsInline
               />
 
@@ -100,77 +99,7 @@ export default function LiveStreamSection() {
         </section>
       </div>
 
-      {/* Mobile view (no brand-bg, stacked layout) */}
-      <div className="block sm:hidden w-full px-4 py-12">
-        <section className="w-full bg-[#0E1321] rounded-2xl py-10 px-4 flex flex-col items-center text-center">
-          {/* Heading */}
-          <h2 className="text-2xl font-bold text-white mb-3">
-            Experience Live{" "}
-            <span className="bg-[linear-gradient(117deg,#F9AC17_0%,#FF5E01_100%)] bg-clip-text text-transparent">
-              Streams
-            </span>
-          </h2>
-          <p className="text-gray-300 text-sm mb-8">
-            Go live, engage your audience, and earn more with TiwiFlix.
-          </p>
-
-          {/* Video */}
-          <div className="relative w-full aspect-video rounded-xl overflow-hidden mb-6">
-            <video
-              ref={videoRef}
-              src="/videos/livestream.mp4"
-              className="w-full h-full object-fill"
-              autoPlay
-              loop
-              muted
-              playsInline
-            />
-
-            {/* Controls */}
-            <div className="absolute bottom-0 left-0 w-full px-3 py-2 bg-[#1a1f35]/90 flex justify-between items-center">
-              <button
-                onClick={togglePlay}
-                className="text-gray-300 hover:text-white"
-              >
-                {isPlaying ? <Pause size={16} /> : <Play size={16} />}
-              </button>
-              
-              <button
-                onClick={togglePlay}
-                className="text-gray-300 hover:text-white"
-              >
-                 <Pause />
-              </button>
-
-              <div className="flex items-center gap-3">
-                <button
-                  onClick={toggleMute}
-                  className="text-gray-300 hover:text-white"
-                >
-                  {isMuted ? <VolumeX size={16} /> : <Volume2 size={16} />}
-                </button>
-                <button className="text-gray-300 hover:text-white">
-                  <MessageCircle size={16} />
-                </button>
-              </div>
-            </div>
-          </div>
-
-          {/* Chat Box below video */}
-          <div className="relative w-full h-[280px] rounded-xl overflow-hidden mb-6">
-            <Image
-              src="/images/chat-box.svg"
-              alt="Live Chat"
-              fill
-              className="object-cover"
-            />
-          </div>
-
-          <button className="px-5 py-2 rounded-lg text-black text-sm font-semibold bg-[#FFBC00] hover:opacity-90 transition">
-            Host a Live Stream
-          </button>
-        </section>
-      </div>
+      
     </>
   );
 }

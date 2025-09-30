@@ -8,7 +8,11 @@ const Navbar: FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 w-full m-4 md:m-0 border border-[#FF9814] md:border-0 rounded-lg md:rounded-none bg-[#02061B] z-50">
+    <section className="w-full flex justify-center items-center ">
+
+<div className="md:hidden w-full  h-4 fixed top-0 z-50 blur-2xl backdrop-blur-2xl"></div>
+
+    <nav className="fixed top-0 w-11/12 md:w-full mt-4 md:mt-0 border border-[#FF9814] md:border-0 rounded-lg md:rounded-none bg-[#02061B] z-50">
 
       <div className="mx-auto flex justify-between items-center px-6 md:px-20 py-4">
         {/* Logo */}
@@ -115,14 +119,8 @@ const Navbar: FC = () => {
         </div>
       </div>
 
-      {/* Backdrop */}
-      {/* {isOpen && (
-        <div
-          className="fixed inset-0 bg-[#080C17] z-40"
-          onClick={() => setIsOpen(false)}
-        ></div>
-      )} */}
     </nav>
+    </section>
   );
 };
 

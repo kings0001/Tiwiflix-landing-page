@@ -4,8 +4,8 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full brand-dark-bg text-gray-300 py-12 px-20">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <footer className="w-full brand-dark-bg text-gray-300 py-12 px-6 md:px-20">
+      <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left: Logo + Description */}
         <div>
           <Image
@@ -15,7 +15,7 @@ export default function Footer() {
             height={40}
             className="mb-1"
           />
-          <p className="text-sm mb-4 max-w-sm">
+          <p className="text-sm text-[#9BA9B4] mb-4 max-w-xs">
             No. 1 Multi-Chain Decentralized Video Streaming and Entertainment
             Platform.
           </p>
@@ -34,17 +34,17 @@ export default function Footer() {
             />
           </div>
           {/* Bottom copyright */}
-          <div className=" pt-6  text-sm text-gray-500">
+          <div className=" pt-6  text-sm text-[#9BA9B4]">
             © TiwiFlix.io. All rights reserved.
           </div>
         </div>
 
         {/* Right: Grid of 4 sections */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Products */}
           <div>
             <h3 className="font-semibold text-white mb-3">Products</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-[#9BA9B4] text-sm">
               <li>TWT Ecosystem</li>
               <li>TiwiFlix App</li>
               <li>TiwiFlix Docs</li>
@@ -54,7 +54,7 @@ export default function Footer() {
           {/* Resources */}
           <div>
             <h3 className="font-semibold text-white mb-3">Resources</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-[#9BA9B4] text-sm">
               <li>FAQ</li>
             </ul>
           </div>
@@ -62,7 +62,7 @@ export default function Footer() {
           {/* Dive in */}
           <div>
             <h3 className="font-semibold text-white mb-3">Dive in</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-[#9BA9B4] text-sm">
               <li>Buy TWC</li>
               <li>Explore Videos</li>
               <li>Become a creator</li>
@@ -73,7 +73,7 @@ export default function Footer() {
           {/* Connect */}
           <div>
             <h3 className="font-semibold text-white mb-3">Connect</h3>
-            <ul className="space-y-2 text-sm">
+            <ul className="space-y-2 text-[#9BA9B4] text-sm">
               <li>X</li>
               <li>Facebook</li>
               <li>Instagram</li>

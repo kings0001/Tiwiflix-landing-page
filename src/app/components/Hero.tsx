@@ -29,7 +29,7 @@ const Hero: FC = () => {
       </div> */}
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col items-center mt-44">
+      <div className="relative z-10 flex flex-col items-center md:mt-44">
         <h1 className="text-5xl md:text-5xl text-[#FFF] max-w-sm md:max-w-5xl font-semibold leading-tight">
           The Multi-chain Platform Where{" "} <br />
           <span className="text-brand-yellow">Creators Rule</span>

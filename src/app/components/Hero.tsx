@@ -18,15 +18,6 @@ const Hero: FC = () => {
 
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-60"></div>
 
-      
-      {/* <div className="hidden md:flex gap-[2.125rem] md:gap-0 absolute bottom-0 justify-center z-0">
-        <Image
-          src="/images/vector.svg"
-          alt="tiwiflix Vector logo"
-          width={400}
-          height={600}
-        />
-      </div> */}
 
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center md:mt-44">

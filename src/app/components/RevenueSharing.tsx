@@ -8,7 +8,7 @@ const RevenueSharing: FC = () => {
         {/* Left Content */}
         <div className="flex-1 max-w-md text-center md:text-left ">
           {/* Label */}
-          <div className="inline-flex items-center gap-1 bg-[#271600] text-[#FFBC00] rounded-full px-4 py-2 mb-4 text-xs sm:text-sm font-medium">
+          <div className="inline-flex items-center gap-1 bg-[#271600] text-[#FFBC00] rounded-full  px-4 py-3 text-sm mb-4  sm:text-sm font-medium">
             <Image
               src="/images/logo.svg"
               alt="logo"
@@ -24,8 +24,8 @@ const RevenueSharing: FC = () => {
             <span className="text-brand-yellow">Creators.</span>
           </h2>
 
-          <ul className="space-y-3 text-white text-sm sm:text-base">
-            <li className="flex items-start justify-start">
+          <ul className="space-y-3 text-white text-left text-sm sm:text-base">
+            <li className="flex items-start md:justify-start">
               <Image
                 src="/images/tick.svg"
                 alt="check"

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 
 const row1Movies = [
   { src: "/images/image_slider/photo1.svg", title: "The Pickup" },
@@ -24,6 +24,59 @@ const row2Movies = [
   { src: "/images/image_slider/image_slider_row-2/Property 1=Variant32.svg", title: "The Goat Life" },
 ];
 
+function MovieCard({
+  movie,
+  index,
+  activeIndex,
+  setActiveIndex,
+  rowRef,
+}: {
+  movie: { src: string; title: string };
+  index: number;
+  activeIndex: number | null;
+  setActiveIndex: (i: number | null) => void;
+  rowRef: React.RefObject<HTMLDivElement>;
+}) {
+  const isActive = activeIndex === index;
+
+  const handleToggle = (e: React.MouseEvent) => {
+    if (window.innerWidth < 640) {
+      e.stopPropagation(); // prevent row click
+      setActiveIndex(isActive ? null : index);
+    }
+  };
+
+  return (
+    <div
+      onClick={handleToggle}
+      className="
+        relative shrink-0 group overflow-hidden rounded-md cursor-pointer
+        w-[70%] h-44 sm:w-[50%] sm:h-52 md:w-60 md:h-36
+      "
+    >
+      <Image src={movie.src} alt={movie.title} fill className="object-cover" />
+      <div
+        className={`
+          absolute inset-0 bg-[#000000B2] flex items-center justify-center text-white font-bold transition-opacity
+          ${isActive ? "opacity-100" : "opacity-0"}
+          sm:opacity-0 sm:group-hover:opacity-100
+        `}
+      >
+        <button className="px-3 md:px-4 py-2 rounded-lg text-white text-sm md:text-base font-light bg-[linear-gradient(117deg,#F9AC17_0%,#FF5E01_100%)] transition flex items-center">
+          <span>Stream Now</span>
+          <Image
+            src="/images/play-button.svg"
+            alt="Play Button"
+            width={20}
+            height={20}
+            className="inline-block ml-2"
+          />
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function InfiniteRow({
   movies,
   direction = "left",
@@ -32,6 +85,20 @@ function InfiniteRow({
   direction?: "left" | "right";
 }) {
   const rowRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  // Close overlay when tapping outside row
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (rowRef.current && !rowRef.current.contains(e.target as Node)) {
+        setActiveIndex(null);
+      }
+    };
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, []);
 
   return (
     <motion.div
@@ -47,29 +114,14 @@ function InfiniteRow({
       }}
     >
       {[...movies, ...movies].map((movie, i) => (
-        <div
+        <MovieCard
           key={i}
-          className="relative w-40 h-24 md:w-60 md:h-36 shrink-0 group overflow-hidden rounded-md"
-        >
-          <Image
-            src={movie.src}
-            alt={movie.title}
-            fill
-            className="object-cover"
-          />
-          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 flex items-center justify-center text-white text-sm md:text-lg font-bold transition-opacity">
-            <button className="px-2 md:px-3 py-1 rounded-full text-white font-light bg-[linear-gradient(117deg,#F9AC17_0%,#FF5E01_100%)] transition flex items-center">
-              <span>Stream Now</span>
-              <Image
-                src="/images/play-button.svg"
-                alt="Play Button"
-                width={20}
-                height={20}
-                className="inline-block ml-1 md:ml-2"
-              />
-            </button>
-          </div>
-        </div>
+          movie={movie}
+          index={i}
+          activeIndex={activeIndex}
+          setActiveIndex={setActiveIndex}
+          rowRef={rowRef}
+        />
       ))}
     </motion.div>
   );
@@ -81,7 +133,6 @@ export default function MovieSlider() {
       <h3 className="bg-[#080C17] text-white text-lg md:text-3xl px-4 md:pl-20 font-semibold">
         Stream now
       </h3>
-      {/* Two rows of infinite scrolling movies */}
       <InfiniteRow movies={row1Movies} direction="left" />
       <InfiniteRow movies={row2Movies} direction="right" />
     </div>

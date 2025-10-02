@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="w-full brand-dark-bg text-gray-300 py-12 px-6 md:px-20">
+    <footer className="w-full brand-dark-bg text-gray-300 py-12 px-2 md:px-20">
       <div className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Left: Logo + Description */}
         <div>
@@ -15,7 +15,7 @@ export default function Footer() {
             height={40}
             className="mb-1"
           />
-          <p className="text-sm text-[#9BA9B4] mb-4 max-w-xs">
+          <p className="text-base text-[#9BA9B4] mb-4 max-w-xs md:max-w-sm">
             No. 1 Multi-Chain Decentralized Video Streaming and Entertainment
             Platform.
           </p>
@@ -43,7 +43,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Products */}
           <div>
-            <h3 className="font-semibold text-white mb-3">Products</h3>
+            <h3 className="font-semibold text-base text-white mb-3">Products</h3>
             <ul className="space-y-2 text-[#9BA9B4] text-sm">
               <li>TWT Ecosystem</li>
               <li>TiwiFlix App</li>
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Resources */}
           <div>
-            <h3 className="font-semibold text-white mb-3">Resources</h3>
+            <h3 className="font-semibold text-base text-white mb-3">Resources</h3>
             <ul className="space-y-2 text-[#9BA9B4] text-sm">
               <li>FAQ</li>
             </ul>
@@ -61,7 +61,7 @@ export default function Footer() {
 
           {/* Dive in */}
           <div>
-            <h3 className="font-semibold text-white mb-3">Dive in</h3>
+            <h3 className="font-semibold text-base text-white mb-3">Dive in</h3>
             <ul className="space-y-2 text-[#9BA9B4] text-sm">
               <li>Buy TWC</li>
               <li>Explore Videos</li>
@@ -72,7 +72,7 @@ export default function Footer() {
 
           {/* Connect */}
           <div>
-            <h3 className="font-semibold text-white mb-3">Connect</h3>
+            <h3 className="font-semibold text-base text-white mb-3">Connect</h3>
             <ul className="space-y-2 text-[#9BA9B4] text-sm">
               <li>X</li>
               <li>Facebook</li>

@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function OnTheGoSection() {
   return (
-    <div className="w-full brand-bg md:px-20">
+    <div className="w-full brand-bg px-2 md:px-20">
       <section className="relative md:min-h-screen bg-[linear-gradient(155deg,#F9AC17_44.93%,#FF5E01_85.88%)] px-6 pt-0 md:pt-20 flex flex-col text-center ">
         {/* Background image */}
         <div className="absolute bottom-0 left-0 right-0 h-[75%] bg-[url('/images/biglogovector.svg')] bg-no-repeat bg-bottom bg-contain" />
@@ -14,13 +14,13 @@ export default function OnTheGoSection() {
           <h2 className="text-4xl md:text-5xl font-bold text-[#080C17]">
             TiwiFlix On-The-Go
           </h2>
-          <p className="text-[#080C17] text-lg max-w-xs md:max-w-lg mt-4 mb-6">
-            Your favorite decentralized streaming app is coming soon to mobile.
-            Create and watch content anytime, anywhere.
+          <p className="text-[#080C17] text-lg md:text-xl max-w-xs md:max-w-xl mt-4 mb-6">
+           Your favorite decentralized streaming app is coming soon to mobile. 
+           Create and watch content anytime, anywhere.
           </p>
-          <button className="bg-[#080C17] text-white px-6 py-2 rounded-lg font-medium">
+          <span className="bg-[#080C17] text-white px-6 py-3 rounded-lg font-medium">
             Join Waitlist
-          </button>
+          </span>
         </div>
 
         {/* Phone block */}

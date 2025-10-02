@@ -32,7 +32,7 @@ const faqs = [
 ];
 
 export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -48,7 +48,7 @@ export default function FAQSection() {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border border-gray-700 rounded-lg overflow-hidden"
+            className="border border-gray-700 rounded-xl overflow-hidden"
           >
             {/* Question */}
             <button
@@ -65,11 +65,11 @@ export default function FAQSection() {
 
             {/* Answer with animation */}
             <div
-              className={`transition-all duration-500 ease-in-out overflow-hidden ${
+              className={`transition-all duration-200 ease-in-out overflow-hidden ${
                 openIndex === index ? "max-h-40 opacity-100" : "max-h-0 opacity-0"
               }`}
             >
-              <div className="px-4 py-3 bg-[#080C17] text-gray-300 text-sm">
+              <div className="px-4 py-3 bg-[#080C17] text-white text-sm">
                 {faq.answer}
               </div>
             </div>
